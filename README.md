@@ -55,6 +55,8 @@ ORDER BY
     total_customers,
     total_revenue;
 ```
+## conclusion:
+**We identified new customers per cohort year and calculated how much revenue they generated at the time of acquisition, giving a clear view of cohort performance and quality over time**.
 
 ### 🔍 Insights
 
@@ -113,6 +115,8 @@ SELECT
 FROM 
     segement_values;
 ```
+## conclusion:
+**We calculated each customer’s total lifetime value (LTV) and grouped them into Low, Mid, and High value segments using percentiles, enabling better customer prioritization and targeting.**.
 
 ### 🔍 Insights
 
@@ -163,14 +167,20 @@ FROM
     retention
 WHERE first_purchase_date < '2023-10-20';
 ```
-## 📈 Key Takeaways & Insights
+## conclusion:
+**We analyzed each customer’s last purchase activity to classify them as Active or Churned, helping detect inactive users and potential retention issues.
 
+Since the dataset is nearly 2 years old, using the actual current date would incorrectly classify almost all customers as churned due to the data gap. To avoid this, we used a fixed reference date **| 2024-04-20 |** as the effective current date for all calculations, ensuring more accurate and meaningful churn classification.**.
+
+## 🔍 Insights
 * Tracks **last purchase activity**
 * Defines churn as **no purchase in last 6 months**
 * Helps:
   * Identify **at-risk customers**
   * Improve **retention strategies**
 
+
+## 📈 Key Takeaways
 * Cohort analysis reveals **customer quality over time**
 * LTV segmentation helps prioritize **high-value customers**
 * Retention analysis highlights **churn risks**
@@ -191,6 +201,7 @@ WHERE first_purchase_date < '2023-10-20';
 * **PostgreSQL** – for writing and executing SQL queries
 * **DBeaver** (or any SQL client) – for query management and analysis
 * **Git & GitHub** – for version control and project sharing
+* **ChatGPT** - used to speed up writing tasks, generate structured documentation, and create files like this README more efficiently
 
 ---
 
